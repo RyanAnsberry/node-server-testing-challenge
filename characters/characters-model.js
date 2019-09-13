@@ -11,7 +11,10 @@ function getAll() {
 }
 
 async function insert(character) {
-    return null;
+    return db('characters').insert(character)
+    .then(ids => {
+      return db('characters').where({ id: ids[0] }).first();
+    })
   }
 
 function remove(id) {
