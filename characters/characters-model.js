@@ -1,19 +1,19 @@
 const db = require('../data/dbConfig.js');
 
 module.exports = {
-    find,
-    create,
+    getAll,
+    insert,
     remove
 };
 
-function find() {
+function getAll() {
     return db('characters')
 }
 
-function create() {
+async function insert(character) {
+    return null;
+  }
 
-}
-
-function remove() {
-
-}
+function remove(id) {
+    return null;
+  }
